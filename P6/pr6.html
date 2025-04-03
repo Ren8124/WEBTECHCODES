@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher CV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            width: 210mm;
+            height: 297mm;
+            margin: auto;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .left {
+            background: #dce1e6;
+            width: 35%;
+            padding: 20px;
+            text-align: center;
+        }
+        .left img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+        .right {
+            width: 65%;
+            padding: 40px;
+            position: relative;
+        }
+        .name-section {
+            text-align: left;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .name-section h2 {
+            font-size: 26px;
+            font-weight: 600;
+            margin: 0;
+        }
+        .name-section p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            margin-left: -20px;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+        .section {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .contact p, .skills ul, .education p, .experience ul {
+            text-align: left;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .education, .experience {
+            padding-left: 20px;
+            position: relative;
+        }
+        .education::before, .experience::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 30px;
+            width: 3px;
+            height: calc(100% - 30px);
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        &nbsp;
+        <div class="left">
+            
+            <img src="im.jpg" alt="Profile Picture" style="width: 200px; height: 200px; border-radius: 60%;">
+            <div class="contact section">
+                &nbsp;
+                <h2>CONTACT</h2>
+                <p>Phone: 1234567890</p>
+                <p>Email: renpatel123@gmail.com</p>
+                <p>Address: Surat, Gujarat</p>
+            </div>
+            <div class="skills section">
+                <h2>LANGUAGE</h2>
+                <ul style="list-style-type: square; margin-left: 25px;">
+                    <li>Hindi</li>
+                    <li>English</li>
+                    <li>Gujarati</li>
+                </ul>
+            </div>
+            <div class="skills section">
+                <h2>TECHNICAL SKILLS</h2>
+                <ul style="list-style-type: square;margin-left: 25px;">
+                    <li>Front-end Development: HTML5, CSS3</li>
+                    <li>Back-end Development: Java, Node.js (basics), JavaScript (ES6+)</li>
+                    <li>Database Management: MySQL, Oracle</li>
+                    <li>Responsive Design: Bootstrap, CSS Grid</li>
+                    <li>DBMS</li>
+                    <li>.NET</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div class="name-section">
+                <h2>REN PATEL</h2>
+                <p>Student</p>
+            </div>
+            <div class="section">
+                <h2>&nbsp;&nbsp;&nbsp;&nbsp;PROFILE SUMMARY</h3>
+                <p>Motivated and detail-oriented Computer Science student with a strong foundation in software development, algorithms, and data structures. Passionate about software development, web development, and database management. Enthusiastic about applying academic knowledge to real-world challenges through internships and collaborative projects. Committed to continuous learning and passionate about contributing to innovative tech solutions.</p>
+            </div>
+            <div class="education section">
+                <h2>EDUCATION</h3>
+                <p><strong>DIPLOMA</strong></p>
+                <p>Computer Engineering, Government Polytechnic For Girls, Surat</p>
+                <p><strong>DEGREE</strong></p>
+                <p>Information Communication And Technology, Pandit Deendayal Energy University, Gandhinagar</p>
+            </div>
+            <div class="experience section">
+                <h2>PROJECTS</h3>
+                <p><strong>WIRELESS EV-CAR CHARGING</strong></p>
+                <p>The system provides wireless EV charging slots exclusively for 4-wheeler vehicles, addressing the limitations of wired charging stations such as worn-out cables and high maintenance costs. It also allocates parking slots for CNG, Diesel, and Petrol 4-wheeler vehicles. Wireless charging, which uses electromagnetic fields to transmit power, offers greater convenience by eliminating the need for physical connections. Users can view available charging and parking slots through a mobile application, resulting in significant time and cost saving.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

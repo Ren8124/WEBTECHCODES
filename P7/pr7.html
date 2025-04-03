@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+        .star {
+            cursor: pointer;
+            color: gray;
+        }
+        .star.selected {
+            color: gold;
+        }
+        .feedback-container {
+            width: 600px;
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            margin-right: 150px;
+        }
+        h2 {
+            font-size: 28px;
+        }
+        input, textarea {
+            width: 100%;
+            margin-top: 15px;
+            margin-left: -16px;
+            padding: 14px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 14px 30px;
+            font-size: 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="feedback-container">
+        <h2>FEEDBACK FORM</h2>
+        <input type="text" id="first-name" placeholder="First Name">
+        <input type="text" id="last-name" placeholder="Last Name">
+        <div id="rating">
+            <p>Rating:</p>
+            <i class="fa fa-star fa-2x star" data-index="1"></i>
+            <i class="fa fa-star fa-2x star" data-index="2"></i>
+            <i class="fa fa-star fa-2x star" data-index="3"></i>
+            <i class="fa fa-star fa-2x star" data-index="4"></i>
+            <i class="fa fa-star fa-2x star" data-index="5"></i>
+        </div>
+        <textarea id="feedback" placeholder="Write your feedback here..." style="min-height: 100px; max-height: 200px; min-height: 100px; min-width: 600px; max-width: 600px;"></textarea>
+        <button onclick="submitFeedback()">Submit</button>
+    </div>
+
+    <script>
+        const stars = document.querySelectorAll('.star');
+        let selectedRating = 0;
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = parseInt(star.getAttribute('data-index'));
+                selectedRating = rating === selectedRating ? 0 : rating;
+                stars.forEach(s => {
+                    s.classList[parseInt(s.getAttribute('data-index')) <= selectedRating ? 'add' : 'remove']('selected');
+                });
+            });
+        });
+
+        function submitFeedback() {
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            const feedbackText = document.getElementById('feedback').value;
+            if (!firstName || !lastName) {
+                alert('Please enter your first and last name.');
+                return;
+            }
+            if (selectedRating === 0) {
+                alert('Please provide a rating before submitting.');
+                return;
+            }
+            alert(`Thank you, ${firstName} ${lastName}, for your feedback!\nRating: ${selectedRating}/5\nComments: ${feedbackText}`);
+        }
+    </script>
+
+</body>
+</html>

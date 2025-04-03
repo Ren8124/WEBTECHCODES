@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume with Frames</title>
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #eaeaea;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar Navigation */
+        .nav {
+            width: 20%;
+            background: #2c3e50; /* Soft Slate Gray */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav a {
+            display: block;
+            width: 90%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Updated Hover Effect */
+        .nav a:hover {
+            background: #4a6075; /* Muted Steel Blue */
+            transform: scale(1.03);
+        }
+
+        /* Content Area */
+        .content {
+            width: 80%;
+            background: #f4f4f4; /* Soft Warm Gray */
+            border-left: 4px solid #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        iframe {
+            width: 95%;
+            height: 95%;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="intro.html" target="contentFrame">Introduction</a>
+            <a href="edu.html" target="contentFrame">Education</a>
+            <a href="exp.html" target="contentFrame">Projects</a>
+            <a href="skill.html" target="contentFrame">Skills</a>
+            <a href="contact.html" target="contentFrame">Contact</a>
+        </div>
+        <div class="content">
+            <iframe name="contentFrame" src="resume.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>
