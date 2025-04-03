@@ -1,0 +1,131 @@
+/* General Layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.header {
+  background-color: #2C3E50; /* Dark Slate Blue */
+  color: #ECF0F1; /* Soft White */
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Area */
+.content {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #34495E; /* Slate Gray */
+  color: #ECF0F1; /* Light Gray */
+  padding: 1.5rem;
+  width: 20%;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  border-right: 3px solid #95A5A6; /* Soft Gray Border */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover & Active Effects */
+.sidebar li:hover {
+  background-color: #ECF0F1; /* Soft White */
+  color: #2C3E50; /* Dark Slate Blue */
+  transform: translateX(8px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar li.active {
+  background-color: #2C3E50; /* Dark Slate Blue */
+  color: white;
+}
+
+/* Main Body */
+.body {
+  background: linear-gradient(135deg, #F0F3F4, #BDC3C7); /* Soft Gray Gradient */
+  color: #2C3E50; /* Dark Slate Blue */
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background 0.5s ease-in-out;
+}
+
+.body h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.body p {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  max-width: 600px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Footer */
+.footer {
+  background-color: #2C3E50; /* Dark Slate Blue */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation for Body Text */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    text-align: center;
+    border-right: none;
+    border-bottom: 3px solid #95A5A6;
+  }
+
+  .body {
+    padding: 3rem 1rem;
+  }
+}
